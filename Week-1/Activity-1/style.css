@@ -79,6 +79,7 @@ table {
 th,td {
   width: auto;
   text-align: center;
+  padding: 5px;
 }
 
 
