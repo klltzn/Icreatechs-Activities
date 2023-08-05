@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+
+  <!--This is the naviigation-->
+  <div class="navigation-container">
+    <div class="contact-button" id="contact-button"><i class='bx bxs-envelope'></i></div>
+    <div class="login-button" id="login-button"><i class='bx bxs-log-in'></i></div>
+    <div class="survey-button" id="survey-button"><i class='bx bxs-user-detail'></i></div>
+  </div>
+  <div class="section-1" id="section-1">
+    <div class="form-1">
+      <form action="#" method="post">
+        <h1>Contact Us</h1>
+        <label for="name">Name: </label><input type="text" id="name" required>
+        <label for="email">Email: </label><input type="email" id="email">
+        <label for="message">Message: </label><textarea name="message" id="message" cols="30" rows="5"></textarea>
+        <input id="submit" type="submit" name="submit" value="Submit">
+      </form>
+    </div>
+  </div>
+  <div class="section-2" id="section-2">
+    <div class="form-2">
+      <form action="#" method="post">
+        <h1>Login</h1>
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username">
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password">
+        <input type="submit" id="submit" name="submit" value="Login">
+      </form>
+    </div>
+  </div>
+  <div class="section-3" id="section-3">
+    <div class="form-3">
+      <form action="#" method="post">
+        <h1>Survey</h1>
+        <label for="name">Name:</label>
+        <input type="text" class="b" id="name" name="name">
+        <label for="age">Age:</label>
+        <input type="number" class="b" id="age" name="age">
+        <label class="ss">Gender:</label>
+        <input type="radio" class="s" name="gender" value="male" checked>Male
+        <input type="radio" class="s" name="gender" value="female">Female
+        <input type="radio" class="s" name="gender" value="other">Other
+        <label class="ss">Which programming languages do you know?</label>
+        <input type="checkbox" class="s" name="prog-lang" value="javascript" checked>Javascript
+        <input type="checkbox" class="s" name="prog-lang" value="c" checked>C
+        <input type="checkbox" class="s" name="prog-lang" value="c#">C#
+        <input type="checkbox" class="s" name="prog-lang" value="c++">C++
+        <input type="checkbox" class="s" name="prog-lang" value="java">Java
+        <input type="checkbox" class="s" name="prog-lang" value="python" checked>Python
+        <input type="checkbox" class="s" name="prog-lang" value="php" checked>PHP
+        <label for="comment">Comments:</label>
+        <textarea name="comment" id="comment" cols="20" rows="5"></textarea>
+        <input type="submit" class="b" id="submit" name="submit" value="Submit">
+      </form>
+    </div>
+  </div>
+
+
+
+  <script>
+    let loginBtn = document.getElementById('login-button');
+    let contactBtn = document.getElementById('contact-button');
+    let surveyBtn = document.getElementById('survey-button');
+    let contactForm = document.getElementById('section-1');
+    let loginForm = document.getElementById('section-2');
+    let surveyForm = document.getElementById('section-3');
+
+    loginBtn.addEventListener('click', () => {
+      contactForm.style.display = 'none';
+      surveyForm.style.display = 'none';
+      loginForm.style.display = 'flex';
+    })
+
+    contactBtn.addEventListener('click', () => {
+      surveyForm.style.display = 'none';
+      loginForm.style.display = 'none';
+      contactForm.style.display = 'flex';
+    })
+
+    surveyBtn.addEventListener('click', () => {
+      contactForm.style.display = 'none';
+      loginForm.style.display = 'none';
+      surveyForm.style.display = 'flex';
+    })
+  </script>
+</body>
+</html>
